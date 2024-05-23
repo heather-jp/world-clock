@@ -1,4 +1,14 @@
 function updateTime() {
+  //Fiji
+  let fijiElement = document.querySelector("#fiji");
+  if (fijiElement) {
+    let fijiDateElement = fijiElement.querySelector(".date");
+    let fijiTimeElement = fijiElement.querySelector(".time");
+    let fijiTime = moment().tz("Pacific/Fiji");
+
+    fijiDateElement.innerHTML = fijiTime.format("MMMM Do YYYY");
+    fijiTimeElement.innerHTML = fijiTime.format("h:mm[<small>]:ss A[</small>]");
+  }
   //Paris
   let parisElement = document.querySelector("#paris");
   if (parisElement) {
